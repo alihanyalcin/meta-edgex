@@ -7,3 +7,9 @@ HOMEPAGE = "https://www.edgexfoundry.org/"
 PR = "r1"
 
 LICENSE = "CLOSED"
+
+SRC_URI = "git://github.com/alihanyalcin/edgex-go.git;protocol=https;branch=edinburgh"
+SRCREV = "8790e61ec1b259747e52bb65614210c3d4643a52"
+
+DEPENDS += "xz"
+RDEPENDS_${PN} += "liblzma"
