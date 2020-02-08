@@ -13,17 +13,13 @@ INSANE_SKIP_${PN} = "ldflags textrel file-rdeps"
 INSANE_SKIP_${PN}-dev = "ldflags textrel file-rdeps"
 INSANE_SKIP_${PN}-staticdev = "file-rdeps"
 
-IMAGE_INSTALL += "zeromq"
+#IMAGE_INSTALL += "zeromq"
 
 do_compile() {
     GOPATH="${B}:${S}"
     export GOPATH
     PATH="${B}/bin:$PATH"
     export PATH
-    CGO_ENABLED=1
-    export CGO_ENABLED
-
-    pkg-config --modversion libzmq
 
     mkdir -p ${B}/src/$(dirname ${GO_IMPORT})
     test -e ${B}/src/${GO_IMPORT} || ln -s ${S} ${B}/src/${GO_IMPORT}
