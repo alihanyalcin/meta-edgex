@@ -1,0 +1,10 @@
+libdir=/usr/lib
+includedir=/usr/include
+
+Name: OpenPGM
+Description: PGM Protocol Library.
+Version: 5.2.122
+# packagers may wish to move -lpthread -lm  to Libs.private for platforms with
+# versions of pkg-config that support static linking.
+Libs: -L${libdir} -lpgm -lpthread -lm 
+Cflags: -I${includedir}/pgm-5.2
