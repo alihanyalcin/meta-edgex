@@ -14,7 +14,7 @@ INSANE_SKIP_${PN}-dev = "ldflags textrel file-rdeps"
 INSANE_SKIP_${PN}-staticdev = "file-rdeps"
 
 DEPENDS += "zeromq "
-
+# TODO: RDEPENDS de olabilir!
 do_compile() {
     GOPATH="${B}:${S}"
     export GOPATH
@@ -30,6 +30,18 @@ do_compile() {
 
     oe_runmake
 }
+
+#do_install() {
+# TODO: binary dosyalarını taşı
+#}
+
+#do_install_append_edgex-add-config() {
+# TODO: configuration.toml dosyalarını taşı
+#}
+
+#do_install_append_edgex-add-scripts() {
+# TODO: run scripti ve database scriptini taşı
+#}
 
 addtask do_prepare_edgex_conf after do_compile before do_install
 do_prepare_edgex_conf() {
