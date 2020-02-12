@@ -31,9 +31,22 @@ do_compile() {
     oe_runmake
 }
 
-#do_install() {
-# TODO: binary dosyalarını taşı
-#}
+do_install() {
+    install -d ${D}${EDGEX_BIN}
+    EDGEXPATH=${B}/src/${GO_IMPORT}
+
+    install -m 0755 ${EDGEXPATH}${EDGEX_CONFIG_SEED_EXECUTABLE} ${D}${EDGEX_BIN}
+    install -m 0755 ${EDGEXPATH}${EDGEX_CORE_COMMAND_EXECUTABLE} ${D}${EDGEX_BIN}
+    install -m 0755 ${EDGEXPATH}${EDGEX_CORE_DATA_EXECUTABLE} ${D}${EDGEX_BIN}
+    install -m 0755 ${EDGEXPATH}${EDGEX_CORE_METADATA_EXECUTABLE} ${D}${EDGEX_BIN}
+    install -m 0755 ${EDGEXPATH}${EDGEX_EXPORT_CLIENT_EXECUTABLE} ${D}${EDGEX_BIN}
+    install -m 0755 ${EDGEXPATH}${EDGEX_EXPORT_DISTRO_EXECUTABLE} ${D}${EDGEX_BIN}
+    install -m 0755 ${EDGEXPATH}${EDGEX_SUPPORT_LOGGING_EXECUTABLE} ${D}${EDGEX_BIN}
+    install -m 0755 ${EDGEXPATH}${EDGEX_SUPPORT_NOTIFICATIONS_EXECUTABLE} ${D}${EDGEX_BIN}
+    install -m 0755 ${EDGEXPATH}${EDGEX_SUPPORT_SCHEDULER_EXECUTABLE} ${D}${EDGEX_BIN}
+    install -m 0755 ${EDGEXPATH}${EDGEX_MANAGEMENT_AGENT_EXECUTABLE} ${D}${EDGEX_BIN}
+    install -m 0755 ${EDGEXPATH}${EDGEX_MANAGEMENT_EXECUTOR_EXECUTABLE} ${D}${EDGEX_BIN}
+}
 
 #do_install_append_edgex-add-config() {
 # TODO: configuration.toml dosyalarını taşı
