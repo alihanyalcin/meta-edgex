@@ -46,6 +46,7 @@ do_install() {
     install -m 0755 ${EDGEXPATH}${EDGEX_SUPPORT_SCHEDULER_EXECUTABLE} ${D}${EDGEX_BIN}
     install -m 0755 ${EDGEXPATH}${EDGEX_MANAGEMENT_AGENT_EXECUTABLE} ${D}${EDGEX_BIN}
     install -m 0755 ${EDGEXPATH}${EDGEX_MANAGEMENT_EXECUTOR_EXECUTABLE} ${D}${EDGEX_BIN}
+    install -m 0755 ${WORKDIR}/edgex-edinburgh-launch.sh ${D}${EDGEX_BIN}
 
     install -d ${D}${EDGEX_ETC}
     EXTENSION=".toml"
