@@ -9,13 +9,10 @@ B = "${WORKDIR}/build"
 
 GO_IMPORT = "github.com/alihanyalcin/edgex-go"
 
-INSANE_SKIP_${PN} = "ldflags textrel file-rdeps"
-INSANE_SKIP_${PN}-dev = "ldflags textrel file-rdeps"
-INSANE_SKIP_${PN}-staticdev = "file-rdeps"
+INSANE_SKIP_${PN} = "file-rdeps"
 
-DEPENDS += "zeromq "
-#IMAGE_INSTALL += "mongodb"
-# TODO: RDEPENDS de olabilir!
+DEPENDS += "zeromq"
+
 do_compile() {
     GOPATH="${B}:${S}"
     export GOPATH
