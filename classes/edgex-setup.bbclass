@@ -12,7 +12,8 @@ EDGEX_LOG = "${localstatedir}/log/${EDGEX}"
 
 EDGEX_CONFIGURATION_FILE = "configuration.toml"
 
-MICROSERVICES = "core-command \
+MICROSERVICES = "config-seed \
+                 core-command \
                  core-data \
                  core-metadata \
                  export-client \
@@ -21,5 +22,8 @@ MICROSERVICES = "core-command \
                  support-notifications \
                  support-scheduler \
                  sys-mgmt-agent \
-                 "
+                 security-secrets-setup \
+                 security-proxy-setup \
+                 security-secretstore-setup \
+                "        
 # --------------------------- END OF SETUP CONFIGURATION -----------------------------
