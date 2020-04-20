@@ -33,18 +33,18 @@ do_install() {
     for microservice in ${MICROSERVICES} ; do
 		install -m 0755 ${EDGEXPATH}/cmd/${microservice}/${microservice} ${D}${EDGEX_BIN}
         install -d ${D}${EDGEX_ETC}/${microservice}
-        install -m 0644 ${EDGEXPATH}/cmd/${microservice}/res/${EDGEX_CONFIGURATION_FILE} ${D}${EDGEX_ETC}/${microservice}/${EDGEX_CONFIGURATION_FILE}
+        install -m 0644 ${WORKDIR}/${microservice}.toml ${D}${EDGEX_ETC}/${microservice}/${EDGEX_CONFIGURATION_FILE}
 	done
     
     # Launch Script
     install -m 0755 ${WORKDIR}/edgex-fuji-launch.sh ${D}${EDGEX_BIN}
 }
 
-addtask do_prepare_edgex_conf after do_compile before do_install
-do_prepare_edgex_conf() {
-    CMD="${B}/src/${GO_IMPORT}"
-
-    for microservice in ${MICROSERVICES} ; do
-        sed -i 's+./logs+${EDGEX_LOG}+g' ${CMD}/cmd/${microservice}/res/${EDGEX_CONFIGURATION_FILE}
-    done
-}
+#addtask do_prepare_edgex_conf after do_compile before do_install
+#do_prepare_edgex_conf() {
+#    CMD="${B}/src/${GO_IMPORT}"
+#
+#    for microservice in ${MICROSERVICES} ; do
+#        sed -i 's+./logs+${EDGEX_LOG}+g' ${CMD}/cmd/${microservice}/res/${EDGEX_CONFIGURATION_FILE}
+#    done
+#}
