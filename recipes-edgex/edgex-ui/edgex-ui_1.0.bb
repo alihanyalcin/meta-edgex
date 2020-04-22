@@ -8,8 +8,8 @@ PR = "r1"
 
 LICENSE = "CLOSED"
 
-SRC_URI = "git://github.com/edgexfoundry/edgex-ui-go.git;protocol=https;branch=master \
+SRC_URI = "git://github.com/edgexfoundry/edgex-ui-go.git;protocol=https;branch=fuji \
            file://edgex-ui-server.toml \
            file://edgex-ui-launch.sh \
            "
-SRCREV = "5bd33396c4899597419799a7a42603b405e21a38"
+SRCREV = "277361c19809286defc6bccd20bc08e304c6ef7c"
