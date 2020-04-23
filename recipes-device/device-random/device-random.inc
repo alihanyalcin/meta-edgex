@@ -30,4 +30,5 @@ do_install() {
 
     install -d ${D}${EDGEX_ETC}/device-random
     install -m 0644 ${WORKDIR}/device-random.toml ${D}${EDGEX_ETC}/device-random/${EDGEX_CONFIGURATION_FILE}
+    install -m 0644 ${DEVICEPATH}/cmd/res/device.random.yaml ${D}${EDGEX_ETC}/device-random
 }
