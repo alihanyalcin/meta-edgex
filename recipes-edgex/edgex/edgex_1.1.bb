@@ -8,7 +8,7 @@ PR = "r1"
 
 LICENSE = "CLOSED"
 
-SRC_URI = "git://github.com/alihanyalcin/edgex-go.git;protocol=https;branch=fuji \
+SRC_URI = "git://github.com/edgexfoundry/edgex-go.git;protocol=https;branch=fuji \
            file://edgex-fuji-launch.sh \
            file://config-seed.toml \
            file://core-command.toml \
@@ -24,4 +24,4 @@ SRC_URI = "git://github.com/alihanyalcin/edgex-go.git;protocol=https;branch=fuji
            file://security-proxy-setup.toml \
            file://security-secretstore-setup.toml \
            "
-SRCREV = "6662b85e1fd9872482e1ba2f1197cd669978afb1"
+SRCREV = "5c8c324351b6d4ffa4082e3c9028b357a4c7dc67"
