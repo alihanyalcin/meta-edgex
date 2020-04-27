@@ -31,4 +31,7 @@ do_install() {
     install -d ${D}${EDGEX_ETC}/device-modbus
     install -m 0644 ${WORKDIR}/device-modbus.toml ${D}${EDGEX_ETC}/device-modbus/${EDGEX_CONFIGURATION_FILE}
     install -m 0644 ${DEVICEPATH}/cmd/res/example/*.yml ${D}${EDGEX_ETC}/device-modbus
+
+    # Launch Script
+    install -m 0755 ${WORKDIR}/device-modbus-launch.sh ${D}${EDGEX_BIN}
 }
