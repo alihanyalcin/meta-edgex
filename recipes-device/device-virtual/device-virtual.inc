@@ -31,4 +31,7 @@ do_install() {
     install -d ${D}${EDGEX_ETC}/device-virtual
     install -m 0644 ${WORKDIR}/device-virtual.toml ${D}${EDGEX_ETC}/device-virtual/${EDGEX_CONFIGURATION_FILE}
     install -m 0644 ${DEVICEPATH}/cmd/res/*.yaml ${D}${EDGEX_ETC}/device-virtual
+
+    # Launch Script
+    install -m 0755 ${WORKDIR}/device-virtual-launch.sh ${D}${EDGEX_BIN}
 }
