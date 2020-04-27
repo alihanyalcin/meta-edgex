@@ -31,4 +31,7 @@ do_install() {
     install -d ${D}${EDGEX_ETC}/device-rest
     install -m 0644 ${WORKDIR}/device-rest.toml ${D}${EDGEX_ETC}/device-rest/${EDGEX_CONFIGURATION_FILE}
     install -m 0644 ${DEVICEPATH}/cmd/res/*.yaml ${D}${EDGEX_ETC}/device-rest
+
+    # Launch Script
+    install -m 0755 ${WORKDIR}/device-rest-launch.sh ${D}${EDGEX_BIN}
 }

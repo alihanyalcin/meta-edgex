@@ -31,4 +31,7 @@ do_install() {
     install -d ${D}${EDGEX_ETC}/device-snmp
     install -m 0644 ${WORKDIR}/device-snmp.toml ${D}${EDGEX_ETC}/device-snmp/${EDGEX_CONFIGURATION_FILE}
     install -m 0644 ${DEVICEPATH}/cmd/res/*.yaml ${D}${EDGEX_ETC}/device-snmp
+
+    # Launch Script
+    install -m 0755 ${WORKDIR}/device-snmp-launch.sh ${D}${EDGEX_BIN}
 }

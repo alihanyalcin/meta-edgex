@@ -31,4 +31,7 @@ do_install() {
     install -d ${D}${EDGEX_ETC}/device-mqtt
     install -m 0644 ${WORKDIR}/device-mqtt.toml ${D}${EDGEX_ETC}/device-mqtt/${EDGEX_CONFIGURATION_FILE}
     install -m 0644 ${DEVICEPATH}/cmd/res/example/*.yml ${D}${EDGEX_ETC}/device-mqtt
+
+    # Launch Script
+    install -m 0755 ${WORKDIR}/device-mqtt-launch.sh ${D}${EDGEX_BIN}
 }
