@@ -31,10 +31,10 @@ do_install() {
     EDGEXPATH="${B}/src/${GO_IMPORT}"
 
     for microservice in ${MICROSERVICES} ; do
-		install -m 0755 ${EDGEXPATH}/cmd/${microservice}/${microservice} ${D}${EDGEX_BIN}
+        install -m 0755 ${EDGEXPATH}/cmd/${microservice}/${microservice} ${D}${EDGEX_BIN}
         install -d ${D}${EDGEX_ETC}/${microservice}
         install -m 0644 ${WORKDIR}/${microservice}.toml ${D}${EDGEX_ETC}/${microservice}/${EDGEX_CONFIGURATION_FILE}
-	done
+    done
     
     # Launch Script
     install -m 0755 ${WORKDIR}/edgex-fuji-launch.sh ${D}${EDGEX_BIN}
