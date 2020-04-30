@@ -7,7 +7,7 @@ inherit go pkgconfig
 S = "${WORKDIR}/git"
 B = "${WORKDIR}/build"
 
-GO_IMPORT = "github.com/alihanyalcin/edgex-go"
+GO_IMPORT = "github.com/edgexfoundry/edgex-go"
 
 INSANE_SKIP_${PN} = "file-rdeps"
 
