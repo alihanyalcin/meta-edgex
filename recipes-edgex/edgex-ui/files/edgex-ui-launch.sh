@@ -1,13 +1,12 @@
 #!/bin/bash
 
-# Kill all edgex-ui-go* stuff
+# Kill all edgex-ui-server* stuff
 function cleanup {
 	pkill edgex-ui-server
 }
 
-cd $CMD
-exec -a edgex-ui-server edgex-ui-server --conf=/etc/edgex/edgex-ui-server/configuration.toml &
-cd $DIR
+cd /etc/edgex/edgex-ui-server
+exec -a edgex-ui-server edgex-ui-server &
 
 trap cleanup EXIT
 
