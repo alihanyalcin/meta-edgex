@@ -48,7 +48,7 @@ LogLevel = 'INFO'
   MaxCmdValueLen = 256
   RemoveCmd = ""
   RemoveCmdArgs = ""
-  ProfilesDir = ""
+  ProfilesDir = "/etc/edgex/device-snmp"
 
 [Logging]
 EnableRemote = false

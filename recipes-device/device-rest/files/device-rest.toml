@@ -44,7 +44,7 @@ Type = 'consul'
   MaxCmdValueLen = 256
   RemoveCmd = ''
   RemoveCmdArgs = ''
-  ProfilesDir = ''
+  ProfilesDir = '/etc/edgex/device-rest'
   UpdateLastConnected = false
 
 # Driver configs

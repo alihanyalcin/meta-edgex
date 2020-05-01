@@ -52,7 +52,7 @@ LogLevel = 'INFO'
   MaxCmdValueLen = 256
   RemoveCmd = ""
   RemoveCmdArgs = ""
-  ProfilesDir = ""
+  ProfilesDir = "/etc/edgex/device-virtual"
 
 # Pre-define Devices
 [[DeviceList]]

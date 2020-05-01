@@ -52,7 +52,7 @@ LogLevel = "DEBUG"
   MaxCmdValueLen = 256
   RemoveCmd = ""
   RemoveCmdArgs = ""
-  ProfilesDir = ""
+  ProfilesDir = "/etc/edgex/device-modbus"
 
 # Pre-define Devices
 [[DeviceList]]
