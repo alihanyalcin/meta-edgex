@@ -27,4 +27,5 @@ RDEPENDS_packagegroup-edgex-devices = " \
     device-rest \
     device-snmp \
     device-virtual \
+    device-camera \
     "
