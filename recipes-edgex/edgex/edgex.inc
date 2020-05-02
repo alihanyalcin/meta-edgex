@@ -8,6 +8,7 @@ S = "${WORKDIR}/git"
 B = "${WORKDIR}/build"
 
 GO_IMPORT = "github.com/edgexfoundry/edgex-go"
+EDGEXPATH = "${B}/src/${GO_IMPORT}"
 
 INSANE_SKIP_${PN} = "file-rdeps"
 
@@ -21,14 +22,14 @@ do_compile() {
     PKG_CONFIG_PATH="${WORKDIR}:$PKG_CONFIG_PATH"
     export PKG_CONFIG_PATH
 
-    cd ${B}/src/${GO_IMPORT}
+    cd ${EDGEXPATH}
 
     oe_runmake
 }
 
 do_install() {
+
     install -d ${D}${EDGEX_BIN}
-    EDGEXPATH="${B}/src/${GO_IMPORT}"
 
     for microservice in ${MICROSERVICES} ; do
         install -m 0755 ${EDGEXPATH}/cmd/${microservice}/${microservice} ${D}${EDGEX_BIN}

@@ -7,6 +7,7 @@ S = "${WORKDIR}/git"
 B = "${WORKDIR}/build"
 
 GO_IMPORT = "github.com/edgexfoundry/device-random"
+DEVICEPATH = "${B}/src/${GO_IMPORT}"
 
 INSANE_SKIP_${PN} = "file-rdeps"
 
@@ -16,13 +17,12 @@ do_compile() {
     PATH="${B}/bin:$PATH"
     export PATH
 
-    cd ${B}/src/${GO_IMPORT}
+    cd ${DEVICEPATH}
 
     oe_runmake
 }
 
 do_install() {
-    DEVICEPATH="${B}/src/${GO_IMPORT}"
 
     install -d ${D}${EDGEX_BIN}
     install -m 0755 ${DEVICEPATH}/cmd/device-random ${D}${EDGEX_BIN}

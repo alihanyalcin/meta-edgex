@@ -7,22 +7,23 @@ S = "${WORKDIR}/git"
 B = "${WORKDIR}/build"
 
 GO_IMPORT = "github.com/edgexfoundry/edgex-ui-go"
+EDGEXUIPATH = "${B}/src/${GO_IMPORT}"
 
 INSANE_SKIP_${PN} = "file-rdeps"
 FILES_${PN} += "${datadir}/*"
+
 do_compile() {
     GOPATH="${B}:${S}"
     export GOPATH
     PATH="${B}/bin:$PATH"
     export PATH
 
-    cd ${B}/src/${GO_IMPORT}
+    cd ${EDGEXUIPATH}
 
     oe_runmake
 }
 
 do_install() {
-    EDGEXUIPATH="${B}/src/${GO_IMPORT}"
     
     install -d ${D}${EDGEX_BIN}
     install -m 0755 ${EDGEXUIPATH}/cmd/edgex-ui-server/edgex-ui-server ${D}${EDGEX_BIN}
