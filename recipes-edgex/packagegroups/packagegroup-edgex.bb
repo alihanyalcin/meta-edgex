@@ -24,7 +24,6 @@ RDEPENDS_packagegroup-edgex-devices = " \
     device-modbus \
     device-mqtt \
     device-random \
-    device-rest \
     device-snmp \
     device-virtual \
     "
