@@ -16,6 +16,8 @@ Recipe | Source Code | Branch
 device-mqtt | https://github.com/edgexfoundry/device-mqtt-go | Fuji
 device-snmp | https://github.com/edgexfoundry/device-snmp-go | Fuji
 device-modbus | https://github.com/edgexfoundry/device-modbus-go | Fuji
+device-camera | https://github.com/edgexfoundry/device-camera-go | master
+device-rest | https://github.com/edgexfoundry/device-rest-go | master
 device-virtual | https://github.com/edgexfoundry/device-virtual-go | Fuji
 device-random | https://github.com/edgexfoundry/device-random | Fuji
 
