@@ -1,3 +1,4 @@
+[![meta-edgex](https://img.shields.io/badge/openembedded-layer-blue)](https://layers.openembedded.org/layerindex/branch/master/layer/meta-edgex/)
 # meta-edgex
 This Yocto meta layer contains the recipes needed to build EdgeX Foundry Services that is open-source IoT edge computing solution.
 
